@@ -1,4 +1,4 @@
-CREATE DATABASE practica;
+CREATE DATABASE IF NOT EXISTS practica;
 USE practica;
 
 CREATE TABLE paciente (
@@ -7,8 +7,7 @@ CREATE TABLE paciente (
     apellido VARCHAR(100),
     direccion VARCHAR(100),
     fechaNac DATE,
-    telefonos TEXT,  -- Simulación de ARRAY<STRING(MAX)>
-    edad INT GENERATED ALWAYS AS (TIMESTAMPDIFF(YEAR, fechaNac, CURDATE())) STORED
+    telefonos TEXT
 );
 
 CREATE TABLE enfermedad (
@@ -31,4 +30,4 @@ INSERT INTO enfermedad (id, nombre, id_paciente) VALUES
 (3, 'Asma', 3),
 (4, 'Gripe', 4),
 (5, 'Covid-19', 5);
-commit;
+COMMIT;
