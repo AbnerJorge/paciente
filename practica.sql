@@ -31,3 +31,4 @@ INSERT INTO enfermedad (id, nombre, id_paciente) VALUES
 (3, 'Asma', 3),
 (4, 'Gripe', 4),
 (5, 'Covid-19', 5);
+commit;
